@@ -5,14 +5,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        .box:hover{
+            background-color:wheat;
+            transition: 2s;
+        }
+        .container{
+             margin-top: 60px;
+             margin-right:auto;
+            margin-left:60px;
+        }
+        .box{
+            margin-left: auto;
+            margin-right: 50px;
+            margin-bottom: 50px;
+            border: antiquewhite;
+            border-radius: 8px;
+            background-color: aqua;
+            padding: 10px;
+            width:250px;
+            float: left;
+        }
+        .box img{
+            width:250px;
+            border-radius: 8px;
+            height:150px;
+        }
+        .box a:hover{
+            background-color:blueviolet;
+            box-shadow: 3px 3px 3px black;
+            transition: transform 2s;
+            transform: scale(1.05);
+        }
+        .box h3{
+            text-align: center;
+            margin: 10px 0px;
+        }
+        .box a{
+            color: white;
+            text-decoration: none;
+            display: block;
+            border-radius: 8px;
+            background-color: red;
+            padding: 10px;
+        }
+        .box h5{
+            text-align: justify;
+        }
     </style>
 </head>
 <body style="background-color: bisque;">
     <h1 style="color: red; text-align: center;">PROJECT-6 : CREATE FOLLOWING LAYOUT USING CSS LAYOUT PROPERTIES.</h1>
-    <div>
-        <img src="../image/html.png" alt="Intro Html">
-        <h4 style="text-align: center;">Introduction to Html</h4>
-        <h6>Hypertext Markup Language (HTML) is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets (CSS) and scripting languages such as JavaScript.</h6>
+    <div class="Box">
+        <div class="box">
+            <img src="../image/html.png" alt="Intro Html">
+            <h3 style="text-align: center;">Introduction to Html</h3>
+            <h5>Hypertext Markup Language is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets and scripting languages such as JavaScript.</h5>
+            <a href="Project-5-files/Project-5-html.html" style="text-align: center;">Read More</a>
+        </div>
+        <div class="box">
+            <img src="../image/css.jpg" alt="Intro css">
+            <h3 style="text-align: center;">Introduction to CSS</h3>
+            <h5>Cascading Style Sheets, fondly referred to as CSS, is a simply designed language intended to simplify the process of making web pages presentable.More importantly, CSS enables you to do this independent of the HTML that makes up each web page.</h5>
+            <a href="Project-5-files/Project-5-css.html" style="text-align: center;">Read More</a>
+        </div>
+        <div class="box">
+            <img src="../image/JS.jpg" alt="Intro jS">
+            <h3 style="text-align: center;">Introduction to JavaScript</h3>
+            <h5>The programs in this language are called scripts. They can be written right in a web page’s HTML and run automatically as the page loads.Scripts are provided and executed as plain text. They don’t need special preparation or compilation to run.</h5>
+            <a href="Project-5-files/Project-5-js.html" style="text-align: center;">Read More</a>
+        </div>
+        <div class="box">
+            <img src="../image/introB.png" alt="Intro bootstrap">
+            <h3 style="text-align: center;">Introduction to Bootstrap</h3>
+            <h5>Bootstrap is a free and open-source tool collection for creating responsive websites and web applications. It is the most popular HTML, CSS, and JavaScript framework for developing responsive, mobile-first web sites.</h5>
+            <a href="Project-5-files/Project-5-Bootstrap.html" style="text-align: center;">Read More</a>  
+        </div>
+        
     </div>
     
 </body>
