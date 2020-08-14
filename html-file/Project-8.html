@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project-7</title>
+    <title>Project-8</title>
     <style>
         #box{
             border: 8px solid slategray;
@@ -22,56 +22,56 @@
             text-decoration: white;
             justify-content: center;
             align-items: center;
-            display: flex;
         }
         #foot{
-            background-color:darkslategrey;
-            padding: 15px;
-            font-size: 30px;
+            background-color:grey;
             text-decoration: white;
-            justify-content: center;
-            align-items: center;
-            display: flex;
+            text-align: center;
+            padding: 15px;
         }
         #ban{
             margin-top: 10px;
-            background-color: skyblue;
+            background-image: url(../image/banner.jpg);
             height: 100vh;
             width: 100%;
             font-size: 30px;
-            justify-content: center;
-            align-items: center;
             text-decoration:white;
-            display: flex;
+        }
+        #ban h1{
+            color: white;
+            padding: 10px;
+            padding-left: 20px;
+            
         }
         #circle{
-            height: 250px;
+            height:300px;
             justify-content: center;
             align-items: center;
             display: flex;
         }
         #circle1{
-            border-radius: 50%;
-            background-color:darkgoldenrod;
-            height: 100%;
-            width: 20%;
             float: left;
             margin-right: 30px;
+            border-radius: 50%;
         }
+        
         #sec2{
             height: 405px;
         }
         #left{
-            justify-content: center;
-            align-items: center;
-            display: flex;
+            text-align:center;
             height:400px;
             width: 49.5%;
-            font-size: 30px;
             background-color:darkslategray;
             text-decoration: white;
             float: left;
-
+        }
+        #left h2{
+            padding: 0;
+        }
+        #left h3{
+            padding: 15px;
+            text-align: justify;
         }
         #right{
             height: 400px;
@@ -84,10 +84,11 @@
             align-items: center;
             display: flex;
             font-size: 30px;
-            background-color:orangered;
+            background-image:url(../image/p1.jpg);
             text-decoration: white;
             height:130px ;
             margin-bottom: 5px;
+            background-size:cover;
 
         }
         #art2{
@@ -95,10 +96,11 @@
             align-items: center;
             display: flex;
             font-size: 30px;
-            background-color:orangered;
+            background-image:url(../image/p2.jpeg);
             text-decoration: white;
             height:130px ;
             margin-bottom: 5px;
+            background-size:cover;
 
         }
         #art3{
@@ -106,9 +108,10 @@
             align-items: center;
             display: flex;
             font-size: 30px;
-            background-color:orangered;
+            background-image:url(../image/p3.jpg);
             text-decoration: white;
             height:130px ;
+            background-size:cover;
 
         }
         #square{
@@ -117,45 +120,132 @@
             align-items: center;
             display: flex;
         }
-        #sq1{
-            height: 250px;
-            width: 20%;
-            background-color: red;
+        .container{
+             margin-top: 60px;
+             margin-right:auto;
+            margin-left:60px;
+        }
+        #square{
+            height: 400px;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+        .box:hover{
+            transition: 2s;
+        }
+        .box{
+            height: 380px;
             float: left;
+            width: 20%;
             margin-right: 20px;
+            background-color: darkgray;
 
+        }
+    }
+        .box{
+            margin-right: 50px;
+            border:black;
+            border-radius: 8px;
+            background-color:black;
+            width:250px;
+            float: left;
+            height: 370px;
+        }
+        #right a{
+            text-decoration: none;
+            color: black;
+
+        }
+        .box img{
+            width:100%;
+            height:150px;
+        }
+        .box a:hover{
+            background-color:blueviolet;
+            box-shadow: 3px 3px 3px black;
+            transition: transform 4s;
+            transform-style:flat;
+            transform: scale(1.05);
+        }
+        .box h3{
+            text-align: center;
+            margin: 10px 0px;
+        }
+        .box a{
+            color: white;
+            text-decoration: none;
+            display: block;
+            border-radius: 8px;
+            background-color: red;
+            padding: 10px;
+            
+        }
+        .box h5{
+            text-align: justify;
+            padding: 8px;
         }
     </style>
 </head>
 <body>
     <div id="box">
-        <div id="head">Header</div>
-        <div id="ban">Banner</div>
-        <h2>Section-1</h2>
-        <div id="circle">
-            <div id="circle1"></div>
-            <div id="circle1"></div>
-            <div id="circle1"></div>
-            <div id="circle1"></div>
+        <div id="head">
+            
         </div>
-        <h2>Section-2</h2>
+        <div id="ban"><h1>PRACTICAL - 8</h1></div>
+        <h2>Team Members</h2>
+        <div id="circle">
+            <div><img src="../image/1.png" alt="Member1" id="circle1"></div>
+            <div><img src="../image/2.png" alt="Member2" id="circle1"></div>
+            <div><img src="../image/3.png" alt="Member3" id="circle1"></div>
+            <div><img src="../image/9.png" alt="Member4" id="circle1"></div>
+        </div>
+        <h2>About Us</h2>
         <div id="sec2">
-            <div id="left">Main Content</div>
+            <div id="left">
+                <h2>About Projects</h2>
+                <h3>
+                    Developed detailed project plans to track progress and improve efficiency.Prepared budgets based on project needs.Tracked spendings and project costs to stay within budget.Managed and supervised teams from multiple departments.Built strong relationships with stakeholders and customers.Monitored project progress and made adjustments as needed.Recruiters understand well that job success isn't only about experience. Many attributes can make a difference in an applicant.Once you understand those attributes and highlight them in your resume, your chances are as good as those of any senior candidate.The hiring company is looking for a project manager to handle specific tasks. You'll be able to find more details about that in the job application.Read it carefully, identify those duties, and prepare to include them in your resume.Now to be convincing, feature the specific skills that allow you to perform those tasks. And support that with your educational background and unique certificates.
+                </h3>
+            </div>
             <div id="right">
-                <div id="art1">Article-1</div>
-                <div id="art2">Article-2</div>
-                <div id="art3">Article-3</div>
+                <div id="art1"><a href="Project-1.html">Project-1</a></div>
+                <div id="art2"><a href="Project-1.html">Project-2</a></div>
+                <div id="art3"><a href="Project-1.html">Project-3</a></div>
             </div>
         </div>
-        <h2>Section-3</h2>
+        <h2>Technology Used</h2>
         <div id="square">
-            <div id="sq1"></div>
-            <div id="sq1"></div>
-            <div id="sq1"></div>
-            <div id="sq1"></div>
+            <div class="box">
+                <img src="../image/html.png" alt="Intro Html">
+                <h3 style="text-align: center;">Introduction to Html</h3>
+                <h5>Hypertext Markup Language (HTML) is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets and scripting languages such as JavaScript.</h5>
+                <a href="Project-5-files/Project-5-html.html" style="text-align: center;">Read More</a>
+            </div>
+            <div class="box">
+                <img src="../image/css.jpg" alt="Intro css">
+                <h3 style="text-align: center;">Introduction to CSS</h3>
+                <h5>Cascading Style Sheets, fondly referred to as CSS, is a simply designed language intended to simplify the process of making web pages presentable.More importantly, CSS enables you to do this independent of the HTML that makes up each web page.</h5>
+                <a href="Project-5-files/Project-5-css.html" style="text-align: center;">Read More</a>
+            </div>
+            <div class="box">
+                <img src="../image/JS.jpg" alt="Intro jS">
+                <h3 style="text-align: center;">Introduction to JavaScript</h3>
+                <h5>The programs in this language are called scripts. They can be written right in a web page’s HTML and run automatically as the page loads.Scripts are provided and executed as plain text. They don’t need special preparation or compilation to run.</h5>
+                <a href="Project-5-files/Project-5-js.html" style="text-align: center;">Read More</a>
+            </div>
+            <div class="box">
+                <img src="../image/introB.png" alt="Intro bootstrap">
+                <h3 style="text-align: center;">Introduction to Bootstrap</h3>
+                <h5>Bootstrap is a free and open-source tool collection for creating responsive websites and web applications. It is the most popular HTML, Cascading Style Sheets , and JavaScript (JS) framework for developing responsive, mobile-first web sites.</h5>
+                <a href="Project-5-files/Project-5-Bootstrap.html" style="text-align: center;">Read More</a>  
+            </div>
         </div>
-        <h2>Section-4</h2>
-        <div id="foot">Footer</div>
+        <h2>Contact</h2>
+        <div id="foot">
+            <h2>Website Template for Practical-8</h2>
+            <a href="">Back to top</a>
+        </div>
     </div>
 </body>
 </html>
