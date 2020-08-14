@@ -16,12 +16,12 @@
             text-align: center;
         }
         #head{
-            background-color: grey;
-            padding: 15px;
-            font-size: 30px;
-            text-decoration: white;
             justify-content: center;
             align-items: center;
+            display: flex;
+            background-color: grey;
+            padding: 10px;
+            font-size: 30px;
         }
         #foot{
             background-color:grey;
@@ -185,12 +185,42 @@
             text-align: justify;
             padding: 8px;
         }
+        #navbar {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+    }
+
+    ul#navbar li {
+      float: left;
+    }
+
+    ul#navbar li a {
+      display: block;
+      color:white;
+      font-weight: bold;
+      padding: 8px 50px;
+      text-decoration: none;
+    }
+
+
+    ul#navbar li a:hover {
+      background-color:white;
+      color:black;
+    }
     </style>
 </head>
 <body>
     <div id="box">
         <div id="head">
-            
+            <ul id="navbar">
+                <li><a href="">Home</a></li>
+                <li><a href="">Team</a></li>
+                <li><a href="">About Us</a></li>
+                <li><a href="">Technologies</a></li>
+                <li><a href="">Contact</a></li>
+              </ul>
         </div>
         <div id="ban"><h1>PRACTICAL - 8</h1></div>
         <h2>Team Members</h2>
