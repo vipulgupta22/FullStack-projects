@@ -17,7 +17,7 @@
             padding: 0;
         }
         #header{
-            position: sticky;
+            position: fixed;
             width: 100%;
             line-height: 70px;
             margin: 0;
@@ -37,8 +37,9 @@
         }
         #content img{
             width:100%;
+            padding-top: 40px;
             max-width: 400px;
-            height: 250px;
+            height: 300px;
             display: block;
             margin: auto;
         }
@@ -54,7 +55,7 @@
             position: fixed;
             border: 5px solid darkslategray;
             left: -100%;
-            transition: 1s;
+            transition: 0.8s;
         }
         #sidebar ul{
             list-style: none;
@@ -109,12 +110,18 @@
         #but:checked~#content{
             width: 80%;
         }
+        #but:checked~#content img{
+            padding-top: 60px;
+        }
         @media(min-width:800px) and (max-width: 1100px){
             #sidebar{
                 width: 30%;
             }
             #but:checked~#content{
             width: 70%;
+        }
+        #but:checked~#content img{
+            padding-top: 60px;
         }
         }
         @media(max-width: 799px){
