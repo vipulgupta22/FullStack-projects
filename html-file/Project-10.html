@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Antic+Slab&display=swap" rel="stylesheet">
+    <title>Project-10</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #container{
+            margin: 0;
+            padding: 0;
+        }
+        #header{
+            position: sticky;
+            width: 100%;
+            line-height: 70px;
+            margin: 0;
+        }
+        #header h1{
+            margin: 0;
+            text-align: center;
+            background-color: darkslategray;
+            color: white;
+            padding: 10px;
+        }
+        #content{
+            width: 100%;
+            padding: 10px;
+            float: right;
+            transition: 1s;
+        }
+        #content img{
+            width:100%;
+            max-width: 400px;
+            height: 250px;
+            display: block;
+            margin: auto;
+        }
+        #content h3{
+            text-align: justify;
+        }
+        #sidebar{
+            margin: 0;
+            top: 59px;
+            width: 20%;
+            height: 100vh;
+            background-color:darkslategray;
+            position: fixed;
+            border: 5px solid darkslategray;
+            left: -100%;
+            transition: 1s;
+        }
+        #sidebar ul{
+            list-style: none;
+
+        }
+        #sidebar ul li{
+            border-bottom: 3px solid rgba(255,255,255,0.2);
+        }
+        #sidebar ul li a{
+            display: block;
+            color: white;
+            text-decoration: none;
+            font-size: 25px;
+            padding: 20px 30px;
+            transition: 0.5s;
+        }
+        #sidebar ul li a:hover{
+            border:5px solid white;
+            transition: 0.5s;
+        }
+        #sidebar ul li a i{
+            margin-right: 10px;
+        }
+        #logo{
+            margin-top: 260px;
+            justify-content: space-evenly;
+            display: flex;
+            align-items: center;
+            border-top: 3px solid rgba(255,255,255,0.2);
+            border-bottom: 3px solid rgba(255,255,255,0.2);
+            padding: 10px;
+        }
+        .show-butn,.hide-butn{
+            font-size: 30px;
+            color: white;
+            position: fixed;
+            top: 10px;
+            left: 40px;
+        }
+        .hide-butn{
+            opacity:0;
+        }
+        #but:checked~#sidebar{
+            left: 0;
+        }
+        #but:checked~.show-butn{
+            opacity: 0;
+        }
+        #but:checked~.hide-butn{
+            opacity: 1;
+        }
+        #but:checked~#content{
+            width: 80%;
+        }
+        @media(min-width:800px) and (max-width: 1100px){
+            #sidebar{
+                width: 30%;
+            }
+            #but:checked~#content{
+            width: 70%;
+        }
+        }
+        @media(max-width: 799px){
+            #sidebar{
+                width: 100%;
+            }
+            #sidebar ul li a{
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <h1><i class="fas fa-layer-group"></i> Full Stack</h1>
+        </div>
+        <input type="checkbox" id="but">
+        <label for="but" class="show-butn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <input type="checkbox" id="but">
+        <label for="but" class="hide-butn">
+            <i class="fas fa-times"></i>
+        </label>
+        <div id="sidebar">
+            <ul>
+                <li><a href="#"><i class="fas fa-home"></i>Home</a></li>
+                <li><a href="#content"><i class="fas fa-user-alt"></i>About</a></li>
+                <li><a href="../index.html"><i class="fab fa-product-hunt"></i>Practicals</a></li>
+                <li><a href="#logo"><i class="fas fa-id-badge"></i>Contact</a></li>
+            </ul>
+            <div id="logo">
+                <a href="https://github.com/vipulgupta22"><i class="fab fa-github fa-4x"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/vipul-gup-2204/"><i class="fab fa-linkedin fa-4x"></i>
+                </a>
+                <a href="https://www.instagram.com/its_vipul.gupta/"><i class="fab fa-instagram fa-4x"></i>
+                </a>
+              </div>
+        </div>
+        <div id="content">
+            <img src="../image/fullstack.png" alt="">
+            <h3 id="text">The World Wide Web has become a major delivery platform for a variety of
+                complex and sophisticated enterprise applications in several domains. In addition to
+                their inherent multifaceted functionality, these web applications exhibit complex
+                behavior and place some unique demands on their usability, performance, security
+                and ability to grow and evolve. However, a vast majority of these applications
+                continue to be developed in an ad-hoc way, contributing to problems of usability,
+                maintainability, quality and reliability. While web development can benefit from
+                established practices from other related disciplines, it has certain distinguishing
+                characteristics that demand special considerations. In the recent years, there have
+                been some developments towards addressing these problems and requirements. As
+                an emerging discipline, web engineering actively promotes systematic, disciplined
+                and quantifiable approaches towards successful development of high-quality,
+                ubiquitously usable web-based systems and applications.In particular, web engineering focuses on the methodologies, techniques and tools
+                that are the foundation of web application development and which support their
+                design, development, evolution, and evaluation. Web application development has
+                certain characteristics that make it different from traditional software, information
+                system, or computer application development. Web engineering is multidisciplinary
+                and encompasses contributions from diverse areas: systems analysis and design,
+                software engineering, hypermedia/hypertext engineering, requirements engineering,
+                human-computer interaction, user interface, information engineering, information
+                indexing and retrieval, testing, modeling and simulation, project management, and
+                graphic design and presentation. Web engineering is neither a clone, nor a subset of
+                software engineering, although both involve programming and software development.In particular, web engineering focuses on the methodologies, techniques and tools
+                that are the foundation of web application development and which support their
+                design, development, evolution, and evaluation. Web application development has
+                certain characteristics that make it different from traditional software, information
+                system, or computer application development. Web engineering is multidisciplinary
+                and encompasses contributions from diverse areas: systems analysis and design,
+                software engineering, hypermedia/hypertext engineering, requirements engineering,
+                human-computer interaction, user interface, information engineering, information
+                indexing and retrieval, testing, modeling and simulation, project management, and
+                graphic design and presentation. Web engineering is neither a clone, nor a subset of
+                software engineering, although both involve programming and software development.
+            </h3>
+        </div>
+    </div>
+</body>
+</html>
