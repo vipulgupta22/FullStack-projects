@@ -7,23 +7,47 @@
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <style>
+        *{
+            margin:0;
+            padding: 0;
+        }
     table{
-          border: 5px solid white;
+          border: 10px solid white;
           border-radius: 10px;
-          border-collapse:collapse;
+          border-collapse: collapse;
       }
       th,td {
         padding: 10px;
         text-align: center;
-        border-right: none;
         border-left: none;
         border-top: none;
+        border-right: 3px solid white;
         font-size: 20px;
       }
-      div{
+      .star {
+        background:#84a98c;
+      }
+      .diamond {
+        background:#00f5d4;
+      }
+      .standard {
+        background:#aed9e0;
+      }
+      .deluxe {
+        background:#a3b18a;
+      }
+      #table{
           display: flex;
           justify-content: center;
           align-items: center;
+          margin-top: 0;
+          padding-top: 0;
+      }
+      tbody tr:nth-child(odd){
+          background: #dee2e6;
+      }
+      tfoot tr:nth-child(odd){
+          background: #dee2e6;
       }
       .fa-check{
           color: green;
@@ -39,10 +63,6 @@
           background-color: indigo;
           color: white;
           border-radius: 10px;
-      }
-      #button:hover{
-          background-color:white;
-          color: black;
       }
       #button a{
           color: white;
@@ -62,20 +82,36 @@
       .fas,.fab{
           padding-right: 10px;
       }
+      h2{
+          text-align: center;
+          font-size: 30px;
+          
+      }
+      #box{
+          width: 100%;
+          background-color: teal;
+          height:100vh;
+      }
     </style>
 </head>
 <body>
-    <div>
+    <div id="box">
+    <div style="width: 46.09%;margin-left: 27%;padding-top: 10px;"><h2 style="background-color: white;padding-top: 10px;">SELECT YOUR PLAN</h2></div>
+    <div id="table">
         <table>
-            <tr>
-                <th id="Heading" colspan="4" style="font-size: 30px;">SELECT YOUR PLAN</th>
-            </tr>
+        <colgroup class="star"></colgroup>
+        <colgroup class="diamond"></colgroup>
+        <colgroup class="standard"></colgroup>
+        <colgroup class="deluxe"></colgroup>
+        <thead>
             <tr>
                 <th width="150" style="color: indigo;font-size: 30px;"><i class="fas fa-building"></i>Basic</th>
                 <th width="150" style="color: indigo;font-size: 30px;"><i class="fas fa-gem"></i>Plus</th>
                 <th width="150" style="color: indigo;font-size: 30px;"><i class="fab fa-telegram"></i>Deluxe</th>
                 <th width="150" style="color: indigo;font-size: 30px;"><i class="fas fa-tachometer-alt"></i>Pro</th>
             </tr>
+        </thead>
+        <tbody>
             <tr>
                 <td style="color: green;font-size: 25px;">Rs.500/-</td>
                 <td style="color: green;font-size: 25px;">Rs.1500/-</td>
@@ -136,13 +172,17 @@
                 <td><i class="fa fa-times" aria-hidden="true"></i></td>
                 <td><i class="fa fa-check" aria-hidden="true"></i></td>
             </tr>
+        </tbody>
+        <tfoot>
             <tr>
                 <td><div id="cent"><div id="button"><a href="#">Sign Up</a></div></div></td>
                 <td><div id="cent"><div id="button"><a href="#">Sign Up</a></div></div></td>
                 <td><div id="cent"><div id="button"><a href="#">Sign Up</a></div></div></td>
                 <td><div id="cent"><div id="button"><a href="#">Sign Up</a></div></div></td>
             </tr>
+        </tfoot>
         </table>
+    </div>
     </div>
 </body>
 </html>
