@@ -86,20 +86,17 @@
             box-sizing: border-box;
             padding-bottom: 30px;
         }
-        #login{
-            border: 5px solid darkslategray;
-            background-color:darkslategray;
-            text-align: center;
-            border-radius: 30px;
-            color: white;
-            padding: 5px;
-            padding-left: 15px;
-            padding-right: 15px;
-        }
-        #login a{
+        #LOGIN{
             text-decoration: none;
             text-align: center;
             color: white;
+            background-color: darkslategray;
+            text-align: center;
+            border-radius: 30px;
+            color: white;
+            padding: 10px;
+            padding-left: 15px;
+            padding-right: 15px;
         }
         #section3 h5 a{
             text-decoration: none;
@@ -139,14 +136,9 @@
             text-align: center;
             border-radius: 30px;
             color: white;
-            padding: 5px;
+            padding: 7px;
             padding-left: 15px;
             padding-right: 15px;
-        }
-        #SIGN a{
-            text-decoration: none;
-            text-align: center;
-            color: white;
         }
         #section6 h5 a{
             text-decoration: none;
@@ -192,24 +184,15 @@
             float: right;
             padding-top: 10px;
         }
-        #signin{
-            padding: 20px;
-            width: 100%;
-            box-sizing: border-box;
-        }
         #SIGNIN{
-            box-sizing: border-box;
-            width: 100%;
             padding: 15px;
+            margin: 20px;
+            box-sizing: border-box;
+            width: 90%;
             border-radius: 30px;
             background:linear-gradient(to bottom left,blue,skyblue);
-        }
-        #SIGNIN a{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-decoration: none;
             color: white;
+            border: 2px solid white;
         }
         #form3 h5{
             text-align: center;
@@ -236,9 +219,9 @@
             #form1,#form2,#form3{
                 width: 300px;
             }
-            #login{
-            padding-left:5px;
-            padding-right:5px;
+            #LOGIN{
+            padding-left:6px;
+            padding-right:6px;
         }
         }
         @media(max-width: 950px){
@@ -252,7 +235,7 @@
                 width: 350px;
                 margin-bottom: 20px;
             }
-            #login{
+            #LOGIN{
             padding-left:20px;
             padding-right:20px;
         }
@@ -266,9 +249,9 @@
             #form1,#form2,#form3{
                 width: 300px;
             }
-            #login{
-            padding-left:5px;
-            padding-right:5px;
+            #LOGIN{
+            padding-left:6px;
+            padding-right:6px;
         }
         }
     </style>
@@ -297,7 +280,7 @@
             </div>
             <div id="section3">
                 <div id="login">
-                <a href="#">LOG IN</a>
+                <input type="submit" value="LOG IN" id="LOGIN">
                 </div>
                 <div>
                     <h5>Don't have an account? <a href="#"><span style="color: black;font-weight: bold;">Sign up</span></a></h5>
@@ -323,8 +306,8 @@
                 </div>
             </div>
             <div id="section6">
-                <div id="SIGN">
-                <a href="#">SIGN UP</a>
+                <div id="SIG">
+                    <input type="submit" value="SIGN UP" id="SIGN">
                 </div>
                 <div>
                     <h5>Have an account? <a href="#"><span style="color:blue;font-weight: bold;">Log in</span></a></h5>
@@ -352,11 +335,8 @@
                 </form>
             </div>
             <div id="section10">
-                <div id="signin">
-                <div id="SIGNIN">
-                    <a href="#">SIGN IN</a>
-                </div>
-            </div>
+                <input type="submit" value="SIGN IN" id="SIGNIN">  
+                
                 <h5>or Sign in with:</h5>
                 <div id="form3icon">
                     <div id="ic1">
