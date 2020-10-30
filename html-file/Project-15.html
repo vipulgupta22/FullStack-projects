@@ -21,7 +21,7 @@
         }
         input{
             margin: 15px;
-            width: 30px;
+            width: 100px;
             font-size: 25px;
             height: auto;
             text-align: center;
@@ -39,9 +39,24 @@
 <body>
     <h1>Counter</h1>
     <div>
-        <button id="sub">-</button>
-        <input type="text" value="0">
-        <button id="add">+</button>
+        <button id="sub" onclick="sub()">-</button>
+        <input type="text" value="0" id="valuenum">
+        <button id="add" onclick="add()">+</button>
     </div>
+    <script>
+        let input =document.querySelector('input');
+        function add(){
+            input.value=parseInt(input.value)+1;
+        }
+        function sub(){
+            if(input.value==0){
+                disabled=true;
+            }
+            else{
+                input.value=parseInt(input.value)-1;
+            }
+        }
+
+    </script>
 </body>
 </html>
