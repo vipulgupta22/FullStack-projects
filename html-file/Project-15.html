@@ -45,15 +45,24 @@
     </div>
     <script>
         let input =document.querySelector('input');
+        document.getElementById("sub").disabled=true;
+        document.getElementById("sub").style.backgroundColor ="grey";
         function add(){
+            document.getElementById("sub").disabled=false;
+            document.getElementById("sub").style.backgroundColor ="chartreuse";
             input.value=parseInt(input.value)+1;
         }
         function sub(){
             if(input.value==0){
                 disabled=true;
+                style.backgroundColor="grey";
             }
             else{
                 input.value=parseInt(input.value)-1;
+            }
+            if(input.value==0){
+                document.getElementById("sub").disabled=true;
+                document.getElementById("sub").style.backgroundColor ="grey";
             }
         }
 
