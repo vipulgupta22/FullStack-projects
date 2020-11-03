@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project-16</title>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <style>
+        /*  Heading  */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background: linear-gradient(to right,skyblue,blue);
+        }
+        .heading{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px;
+            width: 100%;
+        }
+        .heading h1{
+            font-size: 50px;
+            font-weight: bold;
+            text-align: center;
+        }
+        .heading form input,.heading form button{
+            margin-top: 20px;
+            border: none;
+            outline: none;
+            background: white;
+            padding: 10px;
+            font-size: 25px;
+        }
+        .heading form button:hover{
+            background-color:turquoise;
+        }
+        .heading form button i{
+            font-size: 20px;
+            color:blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="heading">
+    <div>
+        <h1>TODO LIST</h1>
+        <form>
+            <input type="text" class="input1">
+            <button class="addbtn"><i class="fas fa-plus-square"></i></button>
+        </form>
+    </div>
+    </div>
+    <div class="container">
+        <ul class="todolist">
+
+        </ul>
+    </div>
+    <script>
+        var todoinput=document.querySelector(".input1");
+        var todobtn=document.querySelector(".addbtn");
+        var todolist=document.querySelector(".todolist");
+
+        todobtn.onclick = create;
+
+        function create(e){
+            e.preventDefault();
+            var newdiv = document.createElement("div");
+            newdiv.classList.add("todo");
+
+            var list=document.createElement("li");
+            list.addclass("todo-list");
+            newdiv.innerHTML="list";
+            newdiv.appendChild("list");
+
+            var chkbtn=document.createElement("button");
+            chkbtn.addclass("chk-btn");
+            chkbtn.innerHTML='<i class="fa fa-check"></i>';
+            newdiv.appendChild("chkbtn");
+
+            var delbtn=document.createElement("button");
+            delbtn.addclass("del-btn");
+            delbtn.innerHTML='<i class="fa fa-trash"></i>';
+            newdiv.appendChild("delbtn");
+
+            todolist.appendChild("newdiv");
+
+        }
+    </script>
+</body>
+</html>
