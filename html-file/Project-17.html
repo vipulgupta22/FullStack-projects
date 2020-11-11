@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project-17</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height: 100vh;
+            color: black;
+            font-family: 'Oswald', sans-serif;
+        }
+        time{
+            font-size: 130px;
+        }
+        #greetings{
+            margin-bottom: 17px;
+        }
+        #name{
+            font-size: 45px;
+            opacity: .5;
+        }
+        #date{
+            font-size: 25px;
+            margin-top: 16px;
+        }
+    </style>
+</head>
+<body>
+    <time id="time"></time>
+    <h1 id="greetings">Good Afternoon</h1>
+    <h2 id="name">Vipul</h2>
+    <h3 id="date"></h3>
+    <script>
+        const time = document.getElementById('time');
+        const greetings = document.getElementById('greetings');
+        const name = document.getElementById('name');
+        const day = document.getElementById('date');
+
+        function show(){
+            let todaytime = new Date();
+            let hour = todaytime.getHours();
+            let min = todaytime.getMinutes();
+            let sec = todaytime.getSeconds();
+            let date = todaytime.toDateString();
+
+            let ampm = hour >=12 ? 'PM' : 'AM';
+
+            if(hour == 24){
+                hour = 0;
+            }
+            else{
+                hour = hour%12 || 12 ;
+            }
+
+            time.innerHTML = `${addZero(hour)}<span>:</span>${addZero(min)}<span>:</span>${addZero(sec)} ${ampm}`;
+            day.innerHTML = `${date}`;
+            setTimeout(show,1000);
+        }
+        function addZero(n){
+            return((parseInt(n,10)<10 ? '0' : '')+n);
+        }
+
+        show();
+    </script>
+</body>
+</html>
