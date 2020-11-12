@@ -17,6 +17,8 @@
             flex-direction: column;
             height: 100vh;
             color: black;
+            background-size:cover;
+            background-position: center;
             font-family: 'Oswald', sans-serif;
         }
         time{
@@ -37,14 +39,17 @@
 </head>
 <body>
     <time id="time"></time>
-    <h1 id="greetings">Good Afternoon</h1>
-    <h2 id="name">Vipul</h2>
+    <h1 id="greetings"></h1>
+    <h2 id="name" contenteditable="true"></h2>
     <h3 id="date"></h3>
     <script>
         const time = document.getElementById('time');
         const greetings = document.getElementById('greetings');
         const name = document.getElementById('name');
         const day = document.getElementById('date');
+
+        name.addEventListener('keypress',setname);
+        name.addEventListener('blur',setname);
 
         function show(){
             let todaytime = new Date();
@@ -69,8 +74,46 @@
         function addZero(n){
             return((parseInt(n,10)<10 ? '0' : '')+n);
         }
+        function greet(){
+            let today = new Date();
+            let hour = today.getHours();
+            if(hour<12){
+                greetings.innerHTML = 'Good Morning';
+                document.body.style.backgroundImage = 'url("../image/landscape_202561.jpg")';
+            }
+            else if(hour<18){
+                greetings.innerHTML = 'Good Afternoon';
+                document.body.style.backgroundImage = 'url("../image/beautiful_scenery_highdefinition_picture_166210.jpg")';
+            }
+            else{
+                greetings.innerHTML = 'Good Evening';
+                document.body.style.backgroundImage = 'url("../image/moonlit-landscape-gre01gr152004.jpg")';
+                document.body.style.color = 'white';
+            }
+        }
+        function getName(){
+            if(localStorage.getItem('myname') == null){
+                name.innerHTML = 'Enter Name';
+            }
+            else{
+                name.innerHTML = localStorage.getItem('myname');
+            }
+        }
+        function setname(e){
+            if(e.type == "keypress"){
+                if(e.keyCode == 13){
+                    localStorage.setItem('myname',e.target.innerHTML);
+                    name.blur();
+                }
+            }
+            else{
+                localStorage.setItem('myname',e.target.innerHTML);
+            }
+        }
 
         show();
+        greet();
+        getName();
     </script>
 </body>
 </html>
