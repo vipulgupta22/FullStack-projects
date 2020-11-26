@@ -72,6 +72,7 @@
         }
         #form2,#form3{
             left: 450px;
+            position:relative;
         }
         .row{
             width:360px;
@@ -112,9 +113,9 @@
     <div id="container">
         <form id="form1">
             <h3>Create Account</h3>
-            <input type="text" placeholder="Email">
-            <input type="password" placeholder="Password">
-            <input type="password" placeholder="Confirm Password">
+            <input type="text" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+            <input type="password" placeholder="Confirm Password" required>
             <div id="btn">
                 <button type="button" id="next1">Next</button>
             </div>
@@ -133,12 +134,12 @@
 
         <form id="form3">
             <h3>Personal Information</h3>
-            <input type="text" placeholder="Username">
-            <input type="text" placeholder="First Name">
+            <input type="text" placeholder="Username" required>
+            <input type="text" placeholder="First Name" required>
             <input type="text" placeholder="Last Name">
             <div id="btn">
                 <button type="button" id="back2">previous</button>
-                <button type="button">Sumbit</button>
+                <button type="submit">Sumbit</button>
             </div>
         </form>
         <div class="row">

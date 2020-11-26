@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation Form</title>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: darkorchid;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+        .container{
+            background-color: white;
+            width: 400px;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+        .header{
+            background-color: turquoise;
+        }
+        .header h2{
+            text-align: center;
+            padding: 20px;
+        }
+        .form{
+            padding: 20px 30px;
+        }
+        .control{
+            margin-bottom: 10px;
+            padding-bottom: 20px;
+        }
+        .control label{
+           display: block;
+           margin-bottom: 5px; 
+        }
+        .control input{
+            display: block;
+            width: 100%;
+            padding: 10px;
+            border-radius: 6px;
+            outline: none;
+            border: 2px solid darkorchid;
+        }
+        .control i{
+            position: absolute;
+            right: 10px;
+            top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Create Account</h2>
+        </div>
+        <form id="form" class="form">
+            <div class="control">
+                <label for="user">Username</label>
+                <input type="text" id="user" placeholder="Enter Username">
+                <i class="fa fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error msg</small>
+            </div>
+            <div class="control">
+                <label for="email">Email ID</label>
+                <input type="text" id="email" placeholder="Enter Email">
+                <i class="fa fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error msg</small>
+           </div>
+           <div class="control">
+                <label for="Password">Password</label>
+                <input type="text" id="Password" placeholder="Enter Password">
+                <i class="fa fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error msg</small>
+            </div>
+            <div class="control">
+               <label for="Password2">Confirm Password</label>
+               <input type="text" id="Password2" placeholder="Re-Enter Password">
+               <i class="fa fa-check-circle"></i>
+               <i class="fas fa-exclamation-circle"></i>
+               <small>Error msg</small>
+        </div>
+        <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script>
+
+    </script>
+</body>
+</html>
