@@ -52,9 +52,12 @@
             border: 2px solid darkorchid;
         }
         .control i{
-            position: absolute;
-            right: 10px;
-            top: 40px;
+            position: relative;
+            top: -30px;
+            left: 240px;
+        }
+        .control .fa-check-circle{
+            left: 260px;
         }
     </style>
 </head>
@@ -67,30 +70,30 @@
             <div class="control">
                 <label for="user">Username</label>
                 <input type="text" id="user" placeholder="Enter Username">
+                <small>Error msg</small>
                 <i class="fa fa-check-circle"></i>
                 <i class="fas fa-exclamation-circle"></i>
-                <small>Error msg</small>
             </div>
             <div class="control">
                 <label for="email">Email ID</label>
                 <input type="text" id="email" placeholder="Enter Email">
+                <small>Error msg</small>
                 <i class="fa fa-check-circle"></i>
                 <i class="fas fa-exclamation-circle"></i>
-                <small>Error msg</small>
            </div>
            <div class="control">
                 <label for="Password">Password</label>
                 <input type="text" id="Password" placeholder="Enter Password">
+                <small>Error msg</small>
                 <i class="fa fa-check-circle"></i>
                 <i class="fas fa-exclamation-circle"></i>
-                <small>Error msg</small>
             </div>
             <div class="control">
                <label for="Password2">Confirm Password</label>
                <input type="text" id="Password2" placeholder="Re-Enter Password">
+               <small>Error msg</small>
                <i class="fa fa-check-circle"></i>
                <i class="fas fa-exclamation-circle"></i>
-               <small>Error msg</small>
         </div>
         <button type="submit">Submit</button>
         </form>
