@@ -54,29 +54,32 @@
         .control i{
             position: relative;
             top: -30px;
-            left: 240px;
+            left: 295px;
             visibility: hidden;
         }
         .control small{
             visibility: hidden;
         }
         .control .fa-check-circle{
-            left: 260px;
+            left: 315px;
         }
-        .control .success{
+        .success input{
             border: 2px solid green;
         }
-        .control .i-success{
+        .success .fa-check-circle{
             color: green;
+            visibility: visible;
         }
-        .control .i-fail{
+        .fail .fa-exclamation-circle{
             color: red;
+            visibility: visible;
         }
-        .control .fail{
+        .fail input{
             border: 2px solid red;
         }
-        .control .small-fail{
+        .fail small{
             color: red;
+            visibility: visible;
         }
         #btn{
             width: 100%;
@@ -92,6 +95,13 @@
             color: white;
             font-weight: 600;
             font-size: 20px;
+            outline: none;
+            transition: all .8s ease;
+        }
+        #btn button:hover{
+            background-color: white;
+            color: darkorchid;
+            border: 3px solid darkorchid;
         }
     </style>
 </head>
@@ -104,36 +114,115 @@
             <div class="control">
                 <label for="user">Username</label>
                 <input type="text" id="user" placeholder="Enter Username">
-                <small>Error msg</small>
                 <i class="fa fa-check-circle"></i>
                 <i class="fas fa-exclamation-circle"></i>
+                <small id="usermsg">Error msg</small>
             </div>
             <div class="control">
                 <label for="email">Email ID</label>
                 <input type="text" id="email" placeholder="Enter Email">
-                <small>Error msg</small>
                 <i class="fa fa-check-circle"></i>
                 <i class="fas fa-exclamation-circle"></i>
+                <small id="emailmsg">Error msg</small>
            </div>
            <div class="control">
                 <label for="Password">Password</label>
                 <input type="text" id="Password" placeholder="Enter Password">
-                <small>Error msg</small>
                 <i class="fa fa-check-circle"></i>
                 <i class="fas fa-exclamation-circle"></i>
+                <small id="passwordmsg">Error msg</small>
             </div>
             <div class="control">
                <label for="Password2">Confirm Password</label>
                <input type="text" id="Password2" placeholder="Re-Enter Password">
-               <small>Error msg</small>
                <i class="fa fa-check-circle"></i>
                <i class="fas fa-exclamation-circle"></i>
+               <small id="password2msg">Error msg</small>
             </div>
             <div id="btn"><button type="submit">Submit</button></div>
         </form>
     </div>
     <script>
+        const form = document.getElementById("form");
+        const user = document.getElementById("user");
+        const email = document.getElementById("email");
+        const Password = document.getElementById("Password");
+        const Password2 = document.getElementById("Password2");
+        const small = document.querySelector("small");
+        const Password2msg = document.getElementById("Password2msg");
+        const Passwordmsg = document.getElementById("Passwordmsg");
+        const usermsg = document.getElementById("usermsg");
+        const emailmsg = document.getElementById("emailmsg");
 
+        form.addEventListener('submit',function(e){
+            e.preventDefault();
+            checkInput();
+        });
+
+        function checkInput(){
+            const uservalue = user.value.trim();
+            const emailvalue = email.value.trim();
+            const Passwordvalue = Password.value.trim();
+            const Password2value = Password2.value.trim();
+
+            if(uservalue === ''){
+                showFail(user);
+                usermsg.innerHTML = "UserName cannot be blank";
+            }
+            else if(!isUserValid(uservalue)){
+                showFail(user);
+                usermsg.innerHTML = "UserName Not Contain Special Characters";
+            }
+            else{
+                showSuccess(user);
+            }
+
+            if(emailvalue === ''){
+                showFail(email);
+                emailmsg.innerHTML = "Email ID cannot be blank";
+            }
+            else if(!isEmailValid(emailvalue)){
+                showFail(email);
+                emailmsg.innerHTML = "Email ID Not Valid";
+            }
+            else{
+                showSuccess(email);
+            }
+            
+            if(Passwordvalue === ''){
+                showFail(Password);
+                Passwordmsg.innerHTML = "Password cannot be blank";
+            }
+            else{
+                showSuccess(Password);
+            }
+
+            if(Password2value === ''){
+                showFail(Password2);
+                Password2msg.innerHTML = "Confirm Password cannot be blank";
+            }
+            else if(Password2value != Passwordvalue){
+                showFail(Password2);
+                Password2msg.innerHTML = "Password Mismatched";
+            }
+            else{
+                showSuccess(Password2);
+            }
+        }
+        function isUserValid(uservalue){
+            return /([a-zA-z0-9]+)/.test(uservalue);
+        }
+        function showFail(input){
+            const formcontrol = input.parentNode;
+            formcontrol.className = 'control fail';
+        }
+        function showSuccess(input){
+            const formcontrol = input.parentNode;
+            formcontrol.className = 'control success';
+        }
+        function isEmailValid(emailvalue){
+            return /^([a-zA-Z0-9_\.\-]+)@([a-zA-Z0-9]+)\.([a-zA-Z]{2,3})$/.test(emailvalue);
+        }
     </script>
 </body>
 </html>
