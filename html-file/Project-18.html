@@ -130,14 +130,14 @@
                 <input type="text" id="Password" placeholder="Enter Password">
                 <i class="fa fa-check-circle"></i>
                 <i class="fas fa-exclamation-circle"></i>
-                <small id="passwordmsg">Error msg</small>
+                <small id="passwordmsg" class="msg1">Error msg</small>
             </div>
             <div class="control">
                <label for="Password2">Confirm Password</label>
                <input type="text" id="Password2" placeholder="Re-Enter Password">
                <i class="fa fa-check-circle"></i>
                <i class="fas fa-exclamation-circle"></i>
-               <small id="password2msg">Error msg</small>
+               <small id="password2msg" class="msg2">Error msg</small>
             </div>
             <div id="btn"><button type="submit">Submit</button></div>
         </form>
@@ -153,6 +153,8 @@
         const Passwordmsg = document.getElementById("Passwordmsg");
         const usermsg = document.getElementById("usermsg");
         const emailmsg = document.getElementById("emailmsg");
+        var msg1 = document.getElementsByClassName("msg1");
+        var msg2 = document.getElementsByClassName("msg2");
 
         form.addEventListener('submit',function(e){
             e.preventDefault();
@@ -166,55 +168,50 @@
             const Password2value = Password2.value.trim();
 
             if(uservalue === ''){
-                showFail(user);
-                usermsg.innerHTML = "UserName cannot be blank";
+                showFail(user,"*UserName cannot be blank");
             }
             else if(!isUserValid(uservalue)){
-                showFail(user);
-                usermsg.innerHTML = "UserName Not Contain Special Characters";
+                showFail(user,"*UserName Not Contain Special Characters");
             }
             else{
                 showSuccess(user);
             }
 
             if(emailvalue === ''){
-                showFail(email);
-                emailmsg.innerHTML = "Email ID cannot be blank";
+                showFail(email,"*Email ID cannot be blank");
             }
             else if(!isEmailValid(emailvalue)){
-                showFail(email);
-                emailmsg.innerHTML = "Email ID Not Valid";
+                showFail(email,"*Email ID Not Valid");
             }
             else{
                 showSuccess(email);
             }
             
             if(Passwordvalue === ''){
-                showFail(Password);
-                Passwordmsg.innerHTML = "Password cannot be blank";
+                showFail(Password,"*Password cannot be blank");
             }
             else{
                 showSuccess(Password);
             }
 
             if(Password2value === ''){
-                showFail(Password2);
-                Password2msg.innerHTML = "Confirm Password cannot be blank";
+                showFail(Password2,"*Confirm Password cannot be blank");
             }
             else if(Password2value != Passwordvalue){
-                showFail(Password2);
-                Password2msg.innerHTML = "Password Mismatched";
+                showFail(Password2,"*Password Mismatched");
             }
             else{
                 showSuccess(Password2);
             }
         }
         function isUserValid(uservalue){
-            return /([a-zA-z0-9]+)/.test(uservalue);
+            return /^([\w\d]+)$/.test(uservalue);
         }
-        function showFail(input){
+        function showFail(input,msg){
             const formcontrol = input.parentNode;
             formcontrol.className = 'control fail';
+            var small = formcontrol.querySelector('small');
+            small.innerHTML = msg ;
         }
         function showSuccess(input){
             const formcontrol = input.parentNode;
